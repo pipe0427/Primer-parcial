@@ -1,13 +1,23 @@
 package com.parcial.parcial.model;
 
+import jakarta.validation.constraints.NotEmpty;
+import jakarta.validation.constraints.Size;
+
 public class Empleado {
     
+    @NotEmpty
     private String id;
+    @NotEmpty
+    @Size(max = 8)
     private String nombre;
+    @NotEmpty
     private String apellido;
+    @NotEmpty
     private String correo;
+    @NotEmpty
     private String direccion;
-    private int telefono;
+    @NotEmpty
+    private String telefono;
 
 
     public String getId() {
@@ -40,10 +50,10 @@ public class Empleado {
     public void setDireccion(String direccion) {
         this.direccion = direccion;
     }
-    public int getTelefono() {
+    public String getTelefono() {
         return telefono;
     }
-    public void setTelefono(int telefono) {
+    public void setTelefono(String telefono) {
         this.telefono = telefono;
     }
 
