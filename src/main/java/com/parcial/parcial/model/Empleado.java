@@ -17,6 +17,7 @@ public class Empleado {
     @NotEmpty
     private String direccion;
     @NotEmpty
+    @Size(max = 10, min = 10)
     private String telefono;
 
 
